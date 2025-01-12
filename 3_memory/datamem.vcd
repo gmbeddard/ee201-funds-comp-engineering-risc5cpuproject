@@ -1,0 +1,113 @@
+$date
+	Wed Apr 24 14:33:46 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_datamem $end
+$scope module dut $end
+$var wire 32 ! addr [31:0] $end
+$var wire 1 " clk $end
+$var wire 32 # data [31:0] $end
+$var wire 32 $ data_in [31:0] $end
+$var wire 1 % write_enable $end
+$var wire 5 & word_addr [4:0] $end
+$var parameter 32 ' MEM_WORDS $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000 '
+$end
+#0
+$dumpvars
+b0 &
+0%
+b0 $
+bx #
+0"
+b0 !
+$end
+#5000
+1"
+#10000
+0"
+#15000
+1"
+#20000
+0"
+1%
+b11011110101011011011111011101111 $
+#25000
+b11011110101011011011111011101111 #
+1"
+#30000
+0"
+0%
+#35000
+1"
+#40000
+bx #
+b1 &
+0"
+1%
+b11001101111111101011101010101110 $
+b100 !
+#45000
+b11001101111111101011101010101110 #
+1"
+#50000
+0"
+0%
+#55000
+1"
+#60000
+0"
+#65000
+1"
+#70000
+0"
+#75000
+1"
+#80000
+0"
+#85000
+1"
+#90000
+0"
+#95000
+1"
+#100000
+0"
+#105000
+1"
+#110000
+0"
+#115000
+1"
+#120000
+0"
+#125000
+1"
+#130000
+0"
+#135000
+1"
+#140000
+0"
+#145000
+1"
+#150000
+0"
+#155000
+1"
+#160000
+0"
+#165000
+1"
+#170000
+0"

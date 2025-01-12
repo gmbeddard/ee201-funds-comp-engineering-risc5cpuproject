@@ -1,0 +1,91 @@
+$date
+	Sat May 04 19:59:14 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_immextend $end
+$var wire 32 ! imm32 [31:0] $end
+$var reg 32 " instr [31:0] $end
+$scope function check_result $end
+$var reg 32 # actual [31:0] $end
+$var reg 32 $ expected [31:0] $end
+$upscope $end
+$scope module dut $end
+$var wire 32 % instr [31:0] $end
+$var wire 32 & imm32 [31:0] $end
+$var parameter 7 ' OPCODE_B_TYPE $end
+$var parameter 7 ( OPCODE_I_TYPE_ALU $end
+$var parameter 7 ) OPCODE_JAL $end
+$var parameter 7 * OPCODE_JALR $end
+$var parameter 7 + OPCODE_L_TYPE $end
+$var parameter 7 , OPCODE_S_TYPE $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100011 ,
+b11 +
+b1100111 *
+b1101111 )
+b10011 (
+b1100011 '
+$end
+#0
+$dumpvars
+b10000000000 &
+b1000000000000000000001010010011 %
+bx $
+bx #
+b1000000000000000000001010010011 "
+b10000000000 !
+$end
+#10000
+b0 !
+b0 &
+b10010001100000011 "
+b10010001100000011 %
+b10000000000 $
+b10000000000 #
+#20000
+b100000 !
+b100000 &
+b10000100010010000000100011 "
+b10000100010010000000100011 %
+b0 $
+b0 #
+#30000
+b1000 !
+b1000 &
+b10001100011 "
+b10001100011 %
+b100000 $
+b100000 #
+#40000
+b0 !
+b0 &
+b1000000001100111 "
+b1000000001100111 %
+b1000 $
+b1000 #
+#50000
+b11110000 !
+b11110000 &
+b1111000000000000000011101111 "
+b1111000000000000000011101111 %
+b0 $
+b0 #
+#60000
+b0 !
+b0 &
+b1100110000001010110011 "
+b1100110000001010110011 %
+b11110000 $
+b11110000 #
+#70000
+b0 $
+b0 #

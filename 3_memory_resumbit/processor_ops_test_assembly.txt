@@ -1,0 +1,36 @@
+    # Allocate stack space
+    addi    sp, sp, -32
+
+    # Save the old frame pointer
+    sw      s0, 28(sp)
+    
+    # Update frame pointer
+    addi    s0, sp, 32
+
+    # Initialize and store values
+    li      a5, 5
+    sw      a5, -20(s0)  # Store 5 in the stack
+
+    # Load, modify, and re-store
+    lw      a5, -20(s0)  # Load value from stack
+    addi    a5, a5, 3    # Increment value by 3
+    sw      a5, -20(s0)  # Store back to the stack
+
+    # Load, shift left, and re-store
+    lw      a5, -20(s0)  # Load modified value
+    slli    a5, a5, 1    # Shift left (multiply by 2)
+    sw      a5, -20(s0)  # Store final result
+
+    # Optionally print the result to console
+    # Assuming an environment with a syscall or pseudo-instruction to print
+    mv      a0, a5       # Move result to a0 (argument for print syscall)
+    li      a7, 1        # syscall number for print integer
+    ecall                # Make a syscall to print the value
+
+    # Restore frame pointer and free stack
+    lw      s0, 28(sp)   # Restore old frame pointer
+    addi    sp, sp, 32   # Deallocate stack space
+
+    # Exit program
+    li      a7, 10       # syscall number for exit
+    ecall                # Exit the program

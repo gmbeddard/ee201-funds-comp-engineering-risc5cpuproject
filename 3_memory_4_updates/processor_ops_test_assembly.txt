@@ -1,0 +1,31 @@
+        .section .text
+        .global _start
+
+_start:
+        # Test simple arithmetic operations
+        addi    x1, x0, 10       # x1 = 10
+        addi    x2, x0, 20       # x2 = 20
+        add     x3, x1, x2       # x3 = x1 + x2 = 30
+
+        # Test logic operations
+        andi    x4, x2, 15       # x4 = x2 & 15 = 20 & 15 = 4
+        ori     x5, x1, 8        # x5 = x1 | 8 = 10 | 8 = 18
+
+        # Memory operations
+        sw      x3, 0(x0)        # Store x3 at address 0
+        lw      x6, 0(x0)        # Load from address 0 to x6
+
+        # Test branch - should skip over the erroneous addition
+        beq     x0, x0, skip     # Branch if x0 == x0, which is always true
+        addi    x3, x3, 100      # Erroneous addition, should be skipped
+
+skip:
+        # Test unconditional jump
+        jal     x7, end          # Jump to 'end' label, store return address in x7
+		
+end:
+        # Test jump register (return to next instruction)
+        jalr    x0, x7, 0        # Jump back to instruction after 'jal' using x7
+
+        # End of program - loop here (a simple way to halt)
+halt:   j       halt            # Infinite loop to simulate halt

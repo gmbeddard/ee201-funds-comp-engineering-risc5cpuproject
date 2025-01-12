@@ -1,0 +1,34 @@
+$date
+	Thu May 09 13:06:42 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_immextend $end
+$scope module dut $end
+$var wire 32 ! instr [31:0] $end
+$var wire 32 " imm_I_type [31:0] $end
+$var parameter 7 # OPCODE_I_TYPE $end
+$var reg 32 $ imm32 [31:0] $end
+$var reg 1 % is_I_type $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10011 #
+$end
+#0
+$dumpvars
+0%
+b0 $
+b1010111 "
+b101011100000000000000000011 !
+$end
+#10000
+b11111111111111111111101011010111 "
+b10101101011100000000000000100011 !
+#20000

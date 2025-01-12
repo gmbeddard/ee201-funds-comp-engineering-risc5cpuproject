@@ -1,0 +1,63 @@
+$date
+	Sun May 05 00:13:22 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_branchcheck $end
+$scope module dut $end
+$var wire 4 ! aluflags [3:0] $end
+$var wire 32 " instr [31:0] $end
+$var parameter 7 # OPCODE_BRANCH $end
+$var parameter 7 $ OPCODE_JAL $end
+$var parameter 7 % OPCODE_JALR $end
+$var reg 1 & carry_flag $end
+$var reg 3 ' funct3 [2:0] $end
+$var reg 1 ( neg_flag $end
+$var reg 7 ) opcode [6:0] $end
+$var reg 1 * overflow_flag $end
+$var reg 1 + taken $end
+$var reg 1 , zero_flag $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1100111 %
+b1101111 $
+b1100011 #
+$end
+#0
+$dumpvars
+x,
+0+
+x*
+bx )
+x(
+bx '
+x&
+b1100011 "
+b100 !
+$end
+#20000
+b0 !
+b1000001100011 "
+#30000
+b1000 !
+b100000001100011 "
+#40000
+b101000001100011 "
+#50000
+b10 !
+b110000001100011 "
+#60000
+b1010 !
+b111000001100011 "
+#70000
+b1101111 "
+#80000
+b1100111 "
+#90000

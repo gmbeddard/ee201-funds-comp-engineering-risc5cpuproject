@@ -1,0 +1,66 @@
+$date
+	Fri Apr 12 16:28:29 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_alu $end
+$scope module dut $end
+$var wire 32 ! operand1 [31:0] $end
+$var wire 32 " operand2 [31:0] $end
+$var wire 4 # operation [3:0] $end
+$var reg 32 $ result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10000
+b110000 $
+b100000 "
+b10000 !
+#20000
+b100000 $
+b1000 #
+b10000 "
+b110000 !
+#30000
+b111100000000 $
+b111 #
+b111100001111 "
+b1111111100000000 !
+#40000
+b1111111111111111 $
+b110 #
+b11111111 "
+#50000
+b1111111100000000 $
+b100 #
+b1111111111111111 !
+#60000
+b10000 $
+b1 #
+b100 "
+b1 !
+#70000
+b1000 $
+b101 #
+b1 "
+b10000 !
+#80000
+b11111111000000000000000000000000 $
+b1101 #
+b100 "
+b11110000000000000000000000000000 !
+#90000
